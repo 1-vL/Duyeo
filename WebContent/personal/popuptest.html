@@ -1,0 +1,57 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.2/themes/smoothness/jquery-ui.css">
+    <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script src="http://code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
+
+        
+    <script>    
+        //$(document.ready(function(){ .. });
+
+        $(function(){
+            //$("#dialog").dialog();
+            $("#dialog").dialog({
+                autoOpen:false, //자동으로 열리지않게
+                position:[100,200], //x,y  값을 지정
+                //"center", "left", "right", "top", "bottom"
+                modal:true, //모달대화상자
+                resizable:false, //크기 조절 못하게
+                
+                buttons:{
+                    "확인":function(){
+                        $(this).dialog("close");
+                    },"취소":function(){
+                        $(this).dialog("close");
+                    }
+                }
+            });
+
+            //창 열기 버튼을 클릭했을경우
+            $("#btn").on("click",function(){
+                $("#dialog").dialog("open"); //다이얼로그창 오픈                
+            });
+        });
+    </script>
+
+</head>
+<body>
+
+<input type="button" id="btn" value="창 열기"/>
+
+<div id="dialog" title="게시글 쓰기">
+	모집 제목: <input type="text" id="title"> <br>
+	작성자: <input type="text" id="author"> <br>
+	<img alt="썸네일 이미지" src="" width="50px" height="50px"> <input type="url"> <input type="button" value="확인">
+	게임이름: <input type="text" id="gameName"> <br>
+	모집 마감 시간: <input type="datetime" id="endTime"> <br>
+	게임 시작 시간: <input type="datetime" id="startTime"> <br>
+	최소인원: <input type="range" id="min"> <input type="number" id="min">~  최대 인원: <input type="range" id="max"> <input type="number" id="min"><br>
+	<input type="button" value="확인"> <br>
+</div>
+
+
+</body>
+</html>

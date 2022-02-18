@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko-US">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>두여 : 동호회 모임 사이트 - 모집글</title>
+<link href="mainStyle.css" rel="stylesheet" type="text/css">
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script type="text/javascript" src="script.js?version=20211208"></script>
+<!-- 임포트 -->
+</head>
+<body id="body"> <!-- 본문영역 -->
+<script>loadHTML("header.html");</script> <!-- 헤더영역 -->
+<main id="mainid" class="mainclass"> <!-- 메인 바디 영역 -->
+<h1 id="maintitle" class="title">전체 모집</h1> <!-- 메인 제목 --> 
+ <br>
+  <div class="slide">
+    <ul>
+      <li><img src="https://cdn.crowdpic.net/list-thumb/thumb_l_C86A1DFCDB7974B58632A451E2BE1F94.jpg" width=fit-content></li>
+      <li><img src="https://cdn.crowdpic.net/list-thumb/thumb_l_C86A1DFCDB7974B58632A451E2BE1F94.jpg" width=fit-content></li>
+      <li><img src="https://cdn.crowdpic.net/list-thumb/thumb_l_C86A1DFCDB7974B58632A451E2BE1F94.jpg" width=fit-content></li>
+      <li><img src="https://cdn.crowdpic.net/list-thumb/thumb_l_C86A1DFCDB7974B58632A451E2BE1F94.jpg" width=fit-content></li>
+    </ul>
+  </div>
+ <div id="searchResult"></div> <!-- 검색결과창 -->
+ <article id="articleNumber" class="gathering" style="width: 80%;" >
+   <img alt="썸네일 이미지" src="http://img.1300k.com/events/site/2021/08/210825_127757_pc.gif" width="50%" height="50%">
+  <div class="articleInfo" style="display: inline-block; text-align: center; position: absolute; top: 40%; margin: 10%; ">
+   <h1 id="title">보드게임</h1>
+   <p id="gameName">게임이름 : 카드게임 </p>
+   <p>참여 인원 : 1 / 4</p>
+   <p id="endTime">모집 종료 시간 : 2021.12.15일 17:11</p>
+   <p id="startTime">게임 시작 시간 : 2021.12.15일 18:00</p>
+   
+   <h5>참여<input type="checkbox" class="participate"></h5>     
+  </div>
+   <p id="desc">
+	설명여부 : O (설명 약 10분 정도 소요) <br>
+	게임소개 : 다양한 종류의 보드게임을 진행할 예정이며, 주로 카드 게임을 할 예정입니다. 원하시는 게임이 있다면 진행 가능합니다. 저는 시끌벅적한 파티게임을 좋아합니다. <br>
+	게임장르 : 카드, 파티 <br>
+	게임시간 : 15분-30분 <br>
+	난이도: 1 / 5</p>
+   
+ </article>
+ <div id="comments" class="comment"> <!-- 댓글 메뉴 -->
+  <div id="commentList">
+   <ul>
+    <li><span>댓글 1</span> | <span>작성자</span> | <span>3시간 전</span></li>
+    <li><span>댓글 2</span> | <span>작성자</span> | <span>1시간 전</span></li>
+   </ul>
+  </div>
+  <form id="commentWrite">
+  <label for="comment">댓글입력: </label>
+   <input type="text" id="comment" placeholder="댓글">
+   <input type="text" id="commentWriter" placeholder="작성자">
+   <button>댓글 달기</button>
+  </form>
+  <br>
+   <a href="javascript:history.back();">뒤로가기</a> <!-- 페이지 뒤로가기 버튼 -->
+ </div>
+ 
+</main>
+<script>loadHTML("footer.html");</script> <!-- 푸터영역 -->
+</body>
+</html>

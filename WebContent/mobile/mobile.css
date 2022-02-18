@@ -1,0 +1,25 @@
+@charset "UTF-8";
+@import url(//fonts.googleapis.com/earlyaccess/jejugothic.css);
+
+* {	
+	font-family: 'Jeju Gothic', sans-serif;
+	--color-primary: #363e59;
+	--color-secondary: #fff9e6;
+	--link-color: #cb7474;
+}
+.ui-collapsible-inset .ui-collapsible-heading {
+	border: none;
+	background-color: #ddd;
+	vertical-align: center;
+}
+.ui-btn-icon-right:after { /* li우측 버튼 */ 
+    display: none;
+}
+sub {
+    display: inline-flex;
+    justify-content: space-around;
+    align-items: center;
+}
+sub span {
+	margin: 1%;
+}

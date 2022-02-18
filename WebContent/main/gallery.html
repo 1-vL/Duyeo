@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ko-US">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>두여 : 동호회 모임 사이트</title>
+<link href="mainStyle.css" rel="stylesheet" type="text/css">
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script type="text/javascript" src="script.js?version=20211208"></script>
+<style type="text/css">
+#reviewlist {
+ margin: 5px;
+}
+.gridview {
+ display: flex; flex-wrap: wrap; text-align: center; justify-content: space-evenly; align-items: center; align-content: center;
+}
+.gridview > li {
+ text-align: center; margin: 20px; padding: 20px; text-align: center;
+ background-color: rgba(203, 116, 116, 0.1); border-radius: 10px;
+}
+.gridview > li > span {
+ margin: 0px 3px;
+}  
+.gridview > li > img {
+ width: 300px;
+} 
+ 
+.listview > li {
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+ padding: 3px 1%;
+}
+.listview > li > img {
+ height: 100px;
+ margin: 10px;
+}
+.listview > li:nth-child(2n) {
+ background-color: rgba(203, 116, 116, 0.1);
+}
+.listview > li > h4 {
+ width: 70%;
+}
+.listview > li > span {
+ width: 10%;
+}
+</style>
+<!-- 임포트 -->
+</head>
+<body id="body"> <!-- 본문영역 -->
+<script>loadHTML("header.jsp");</script> <!-- 헤더영역 -->
+<main id="mainid" class="mainclass"> <!-- 메인 바디 영역 -->
+<h1 id="maintitle" class="title">갤러리</h1> <!-- 메인 제목 --> 
+ <br>
+  <div class="slide">
+    <ul>
+      <li><img src="https://cdn.crowdpic.net/list-thumb/thumb_l_C86A1DFCDB7974B58632A451E2BE1F94.jpg" width=fit-content></li>
+      <li><img src="https://cdn.crowdpic.net/list-thumb/thumb_l_C86A1DFCDB7974B58632A451E2BE1F94.jpg" width=fit-content></li>
+      <li><img src="https://cdn.crowdpic.net/list-thumb/thumb_l_C86A1DFCDB7974B58632A451E2BE1F94.jpg" width=fit-content></li>
+      <li><img src="https://cdn.crowdpic.net/list-thumb/thumb_l_C86A1DFCDB7974B58632A451E2BE1F94.jpg" width=fit-content></li>
+    </ul>
+  </div>
+ <div id="searchResult"></div> <!-- 검색결과창 -->
+ <div id="mainboardMenu" class="boardMenu">
+  <button type="button" id="writeCardButton" class="write">새 글 작성</button><!-- 카드 게시글 추가 -->
+  <button type="button" class="signbutton" onclick="viewChange()">보기방식 변경</button>
+ </div>
+ 
+ <div id="grid/list">
+  <ul id="reviewlist" class="gridview">
+   <li><img src="http://img.1300k.com/events/site/2021/08/210825_127757_pc.gif"><h4><a href="#">카드게임 플레이 영상</a></h4><span>2021.12.07</span><span>15:31</span><span>작성자</span></li>
+   <li><img src="http://img.1300k.com/events/site/2021/08/210825_127757_pc.gif"><h4><a href="#">카드게임 게임 소개</a></h4><span>2021.12.08</span><span>12:27</span><span>작성자</span></li>
+   <li><img src="http://img.1300k.com/events/site/2021/08/210825_127757_pc.gif"><h4><a href="#">카드게임 후기 영상</a></h4><span>2021.12.09</span><span>13:41</span><span>작성자</span></li>
+   <li><img src="http://img.1300k.com/events/site/2021/08/210825_127757_pc.gif"><h4><a href="#">카드게임 리플레이</a></h4><span>2021.12.10</span><span>19:02</span><span>작성자</span></li>
+   <li><img src="http://img.1300k.com/events/site/2021/08/210825_127757_pc.gif"><h4><a href="#">카드게임 리플레이</a></h4><span>2021.12.13</span><span>16:25</span><span>작성자</span></li>
+   <li><img src="http://img.1300k.com/events/site/2021/08/210825_127757_pc.gif"><h4><a href="#">카드게임 리플레이</a></h4><span>2021.12.15</span><span>13:42</span><span>작성자</span></li>
+  </ul>
+ </div>
+ 
+<div class="pageButton">
+  <ul class="pageNum" style="align-content: center;">
+   <li><a>처음 페이지</a></li>
+   <li><a>2</a></li>
+   <li><a>3</a></li>
+   <li><a>...</a></li>
+   <li><a>n-1</a></li>
+   <li><a>n</a></li>
+   <li><a>마지막 페이지</a></li>
+  </ul>
+  <div id="boardSearch">
+     <select id='selSearchOption' >
+       <option value='A'>제목+내용</option>
+       <option value='T'>제목</option>
+       <option value='C'>내용</option>
+     </select>
+       <input id='txtKeyWord'>
+       <input type='button' class="boardSearch" value='검색'>
+   </div>
+</div>
+</main>
+<script>loadHTML("footer.html");</script> <!-- 푸터영역 -->
+</body>
+</html>
